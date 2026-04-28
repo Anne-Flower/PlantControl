@@ -6,6 +6,7 @@
 - add a notification, 1 day before to prevent and the day of the watering.
 - responsive
 - accessibility
+- list of plants
 
 ### Techno:
 - pwa

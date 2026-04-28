@@ -1,5 +1,6 @@
 interface Plant {
     id: number;
+    dateCreated?: Date;
     name: string;
     species?: string;
     wateringFrequency: number;
