@@ -11,7 +11,7 @@
 - pwa
 - React, TS, Tailwind : Front
 - Node : Back
-- Firebase : stockage cloud
+- Firebase : stockage cloud / auth
 - Optionnal : tests playwright
 
 
