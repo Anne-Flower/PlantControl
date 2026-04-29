@@ -32,6 +32,7 @@ const List = () => {
           <Card plant={planty} />
           <Card plant={planty} />
           <Card plant={planty} />
+          <Card plant={planty} />
         </div>
       </div>
     </>
