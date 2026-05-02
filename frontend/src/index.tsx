@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AddPage from "./AddPage";
+import LoginPage from "./LoginPage";
 // import HomePage from './HomePage';
 
 const root = ReactDOM.createRoot(
@@ -15,6 +16,7 @@ root.render(
     <Routes>
       <Route index element={<App />} />
       <Route path="/add" element={<AddPage />} />
+      <Route path="/login" element={<LoginPage />} />
     </Routes>
   </BrowserRouter>,
 );

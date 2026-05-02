@@ -1,4 +1,3 @@
-import React from "react";
 import Plant from "../types/plant";
 import { Link } from "react-router";
 
