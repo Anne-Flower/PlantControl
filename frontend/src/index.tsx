@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import AddPage from "./AddPage";
 import LoginPage from "./LoginPage";
+import PrivateRoutes from "./components/PrivateRoutes";
 // import HomePage from './HomePage';
 
 const root = ReactDOM.createRoot(
@@ -14,8 +15,10 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route index element={<App />} />
-      <Route path="/add" element={<AddPage />} />
+      <Route element={<PrivateRoutes />}>
+        <Route index element={<App />} />
+        <Route path="/add" element={<AddPage />} />
+      </Route>
       <Route path="/login" element={<LoginPage />} />
     </Routes>
   </BrowserRouter>,

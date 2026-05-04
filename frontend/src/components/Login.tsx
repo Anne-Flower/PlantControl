@@ -1,20 +1,28 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseAuth } from "../services/firebase";
 import { useState } from "react";
+import { useID } from "../hooks/zustand";
+import { useNavigate } from "react-router";
+
 // TODO Zustand
 
 const Login = () => {
+  let navigate = useNavigate();
   const [loginResult, setLoginResult] = useState();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const setId = useID((state: any) => state.setID);
+
   const handleLogin = () => {
     console.log(email);
     console.log(password);
     signInWithEmailAndPassword(firebaseAuth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        setId(user);
         // @ts-ignore
         setLoginResult(user);
-        setIsLoggedIn(true);
+        navigate("/")
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -67,7 +75,7 @@ const Login = () => {
         Login
       </button>
 
-      <div>{JSON.stringify(loginResult) }</div>
+      <div>{JSON.stringify(loginResult)}</div>
     </section>
   );
 };
